@@ -19,7 +19,8 @@ export class WeatherInfoCustomElement {
 
   getWeather() {
     this.isSearching = true;
-    this.getUserLocation().then(position => client.fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${(position as any).coords.latitude}&lon=${(position as any).coords.longitude}&APPID=${apiKey}&units=imperial`))
+    this.getUserLocation()
+    .then(position => client.fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${(position as any).coords.latitude}&lon=${(position as any).coords.longitude}&APPID=${apiKey}&units=imperial`))
     .then(response => response.json())
     .then(data => {
       this.isSearching = false;
