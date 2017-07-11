@@ -1,4 +1,22 @@
-body { padding-top: 70px; }
+@font-face {
+  font-family: proximaNova;
+  src: url(./src/fonts/ProximaNova-Regular.otf);
+}
+
+@font-face {
+  font-family: proximaNovaThin;
+  src: url(./src/fonts/ProximaNovaAlt-Light.otf);
+}
+
+html {
+  height: 100%;  
+}
+
+body { 
+  padding-top: 140px;
+  min-height: 100%;
+  font-family: proximaNova;
+ }
 
 section {
   margin: 0 20px;
@@ -8,8 +26,47 @@ a:focus {
   outline: none;
 }
 
+.body-background {
+  background: #cc2b5e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .navbar-nav li.loader {
     margin: 12px 24px 0 6px;
+}
+
+.navbar-header {
+  background-color: #fff;
+  color: #cc2b5e;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 0px;
+}
+
+.panel {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 400px;
+  background-color: #fff;
+}
+
+.display-weather {
+  height: 500px;
+}
+
+.navbar-brand {
+  font-family: proximaNovaThin;
+  font-size: 48px;
+  height: 90px;
+}
+
+.navbar-default {
+  border-color: #753a88;
+}
+
+.navbar-header .navbar-brand {
+  color: #753a88;
+  padding-top: 35px;
 }
 
 .no-selection {
@@ -49,4 +106,76 @@ li.list-group-item > a {
 
 li.list-group-item.active > a {
   color: white;
+}
+
+.location-button {
+  top: 150px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.weather-data-container {
+  text-align: center;
+}
+
+.weather-data-container > h2 {
+  border-bottom: 3px solid #cc2b5e;
+}
+
+.todo-data-container {
+  text-align: center;
+}
+
+.todo-data-container > h2 {
+  border-bottom: 3px solid #cc2b5e;
+}
+
+.btn-primary {
+  background-color: transparent;
+  border-color: #cc2b5e;
+  border-radius: 0px;
+  color: #cc2b5e;
+  outline: none;
+  height: 50px;
+  width: 140px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #cc2b5e;
+  border-color: #cc2b5e;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn-primary:focus {
+  background-color: transparent;
+  border-color: #cc2b5e;
+  color: #cc2b5e;
+  outline: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn-primary.disabled:focus {
+  background-color: #cc2b5e;
+  color: #fff;
+}
+
+.weather-city {
+  font-family: proximaNovaThin;
+  font-size: 45px;
+  height: 55px;
+}
+
+.weather-temp {
+  font-family: proximaNovaThin;
+  font-size: 45px;
+  height: 55px;
 }
